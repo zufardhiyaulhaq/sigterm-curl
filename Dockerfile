@@ -11,6 +11,7 @@ RUN addgroup -g 10001 sigterm-curl && \
     chown sigterm-curl:0 /home/sigterm-curl && \
     chmod g=u /home/sigterm-curl && \
     chmod g=u /etc/passwd
+RUN apk add --update --no-cache alpine-sdk curl
 
 ENV USER=sigterm-curl
 USER 10001
